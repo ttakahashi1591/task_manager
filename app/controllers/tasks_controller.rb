@@ -39,4 +39,10 @@ class TasksController < ApplicationController
     Task.destroy(params[:id])
     redirect_to '/tasks'
   end
+
+  def showmethetasks
+    @tasks = Task.all
+    render :index
+    # redirect_to "/tasks"
+  end
 end
